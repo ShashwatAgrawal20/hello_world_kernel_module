@@ -16,18 +16,13 @@ CompileFlags:
 ```
 
 ---
+
 Now we're ready to build our kernel module.
 
 ```bash
-make
+bear -- make
 ```
-
-Once it's done building you've to generate the `compiled_commands.json`(In order to generate this file have to compile the module/kernel atleast once, it doesn't matter even if that's a compilation of empty C file.)
-```bash
-python gen_compiled.compiled_commands.py
-```
-
-The module should be ready btw, we if you aren't coding you don't probably need to generate the `compiled_commands.json` but we did that anyways.
+This will also generate the `compiled_commands.json` file, which is required for our LSP to work properly with the kernel, and other required compilation flags and stuff.
 
 ---
 
